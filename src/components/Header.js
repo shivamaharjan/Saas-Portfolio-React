@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
   return (
@@ -6,9 +7,9 @@ export default function Header() {
       <header className="primary-header">
         <div className="flex logo">
           <div>
-            <a href="#hero">
-              <h1>Shiva</h1>
-            </a>
+            <h1>
+              <Link to={"/"}>Shiva</Link>
+            </h1>
           </div>
 
           <div className="line"></div>
@@ -22,16 +23,16 @@ export default function Header() {
         <div className="right">
           <ul className="flex navigation">
             <li>
-              <a href="#skills">Skills</a>
+              <Link to={"/skills"}>Skills</Link>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <Link to={"/projects"}>Projects</Link>
             </li>
             <li>
-              <a href="#about">About</a>
+              <Link to={"/about"}>About</Link>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <Link to={"/contacts"}>Contacts</Link>
             </li>
           </ul>
         </div>

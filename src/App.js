@@ -9,6 +9,7 @@ import Section5 from "./components/Section5";
 import Section6 from "./components/Section6";
 import Section7 from "./components/Section7";
 import "./style.scss";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -19,14 +20,20 @@ function App() {
         <i className="fa-solid fa-circle-half-stroke dark-mode-toggle"></i>
       </label>
       <div className="wrapper">
-        <Header />
+        <Routes>
+          <Route path="/" element={<Section1/>}></Route>
+          <Route path="/skills" element={<Section3/>}></Route>
+          <Route path="/projects" element={<Section4/>}></Route>
+          <Route path="/about" element={<Section5/>}></Route>
+        </Routes>
+        {/* <Header />
         <Section1 />
         <Section2 />
         <Section3 />
         <Section4 />
         <Section5 />
         <Section6 />
-        <Section7 />
+        <Section7 /> */}
       </div>{" "}
     </div>
   );
